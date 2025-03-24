@@ -1,29 +1,28 @@
-import { jsPDF } from "jspdf";
+document.getElementById("coffeeForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
 
-document
-  .getElementById("coffeeForm")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = Object.fromEntries(new FormData(form));
+  const printArea = document.getElementById("printArea") || createPrintArea();
+  printArea.innerHTML = "";
 
-    const doc = new jsPDF({
-      orientation: "portrait",
-      unit: "cm",
-      format: [6, 9], // 6cm x 9cm
-    });
+  for (const [key, value] of Object.entries(data)) {
+    const line = document.createElement("div");
+    line.className = "info-line";
+    line.textContent = `${
+      key.charAt(0).toUpperCase() + key.slice(1)
+    }: ${value}`;
+    printArea.appendChild(line);
+  }
 
-    let y = 1;
-    doc.setFontSize(10);
-    doc.setFont("Roboto Slab", "bold");
-    for (const [key, value] of Object.entries(data)) {
-      doc.text(
-        `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`,
-        0.5,
-        y
-      );
-      y += 0.8;
-    }
+  window.print();
+});
 
-    doc.save(`${data.name || "info-zrna"}.pdf`);
-  });
+function createPrintArea() {
+  const div = document.createElement("div");
+  div.id = "printArea";
+  div.style.padding = "1rem";
+  div.style.backgroundColor = "#f9f9f9";
+  document.body.appendChild(div);
+  return div;
+}

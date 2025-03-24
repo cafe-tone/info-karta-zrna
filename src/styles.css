@@ -1,0 +1,30 @@
+#printArea {
+  display: none;
+}
+
+@media print {
+  /* Hide everything except the print area */
+  body > *:not(#printArea) {
+    display: none;
+  }
+
+  #printArea {
+    display: block;
+    width: 6cm;
+    height: 9cm;
+    padding: 0.5cm;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 10pt;
+  }
+
+  .info-line {
+    margin-bottom: 0.8cm;
+  }
+
+  /* Force page size */
+  @page {
+    size: 6cm 9cm;
+    margin: 0;
+  }
+}
