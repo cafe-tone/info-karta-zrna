@@ -30,20 +30,153 @@
 </head>
 
 <body>
-    <h1>Info o zrnech</h1>
-    <form id="coffeeForm">
-        <label>Název <input name="name" required></label>
-        <label>Země <input name="country"></label>
-        <label>Chuťový profil <textarea name="taste"></textarea></label>
-        <label>Farmář <input name="farmer"></label>
-        <label>Lokace <input name="location"></label>
-        <label>Výška nad mořem (od) <input name="height_from"></label>
-        <label>Výška nad mořem (do) <input name="height_to"></label>
-        <label>Odrůda <input name="variety"></label>
-        <label>Zpracování <input name="processing"></label>
-        <label>Skóre <input name="score" type="number" min="0" max="100"></label>
-        <button type="submit">Generovat PDF</button>
-    </form>
+    <div id="app">
+        <h1>Info o zrnech</h1>
+        <form id="coffeeForm">
+            <label>Název <input name="name" required></label>
+            <label>Země <input name="country"></label>
+            <label>Chuťový profil <textarea name="taste"></textarea></label>
+            <label>Farmář <input name="farmer"></label>
+            <label>Lokace <input name="location"></label>
+            <label>Výška nad mořem (od) <input name="height_from"></label>
+            <label>Výška nad mořem (do) <input name="height_to"></label>
+            <label>Odrůda <input name="variety"></label>
+            <label>Zpracování <input name="processing"></label>
+            <label>Skóre <input name="score" type="number" min="0" max="100"></label>
+            <button type="submit">Generovat PDF</button>
+        </form>
+    </div>
+
+    <p>Ukázka:</p>
+    <div id="card" style="width: 150.08px; height: 255.12px; padding: 10px; background: white;">
+        <div style=" align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start;
+        align-items: flex-start; gap: 3px; display: flex">
+            <div
+                style="width: 150.08px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div
+                        style="color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                        Země:</div>
+                    <div
+                        style="width: 150.08px; color: black; font-size: 20px; font-family: Roboto Slab; font-weight: 700; text-transform: uppercase; line-height: 22px; word-wrap: break-word">
+                        Etiopie</div>
+                </div>
+                <div
+                    style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div
+                        style="justify-content: flex-end; display: flex; flex-direction: column; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                        Název:</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 20px; font-family: Roboto Slab; font-weight: 700; text-transform: uppercase; line-height: 22px; word-wrap: break-word">
+                        Suke Quto</div>
+                </div>
+            </div>
+            <div style="align-self: stretch; height: 0px; outline: 0.50px black solid; outline-offset: -0.25px"></div>
+            <div
+                style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                    Chuťový profil:</div>
+                <div
+                    style="width: 150.08px; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 1px; display: flex">
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 300; text-transform: uppercase; word-wrap: break-word">
+                        švestky</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 300; text-transform: uppercase; word-wrap: break-word">
+                        čokoládové pralinky</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 300; text-transform: uppercase; word-wrap: break-word">
+                        černý čaj</div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="align-self: stretch; flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex">
+            <div
+                style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="width: 30px; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                    Farmář</div>
+                <div
+                    style="color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                    Tesfaya Bekele</div>
+            </div>
+            <div
+                style="width: 150.08px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="justify-content: flex-end; display: flex; flex-direction: column; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                    Odrůda:</div>
+                <div
+                    style="color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                    Heirloom</div>
+            </div>
+            <div
+                style="width: 150.08px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                    Lokace:</div>
+                <div
+                    style="color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                    Guji</div>
+            </div>
+            <div
+                style="width: 150.08px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div
+                    style="color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                    Nadmořská výška:</div>
+                <div
+                    style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                    <div
+                        style="overflow: hidden; justify-content: flex-start; align-items: center; gap: 3px; display: inline-flex">
+                        <div
+                            style="justify-content: flex-end; display: flex; flex-direction: column; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                            1800</div>
+                        <div
+                            style="justify-content: flex-end; display: flex; flex-direction: column; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                            –</div>
+                        <div
+                            style="justify-content: flex-end; display: flex; flex-direction: column; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                            2200</div>
+                        <div
+                            style="color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                            m.n.m</div>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div
+                    style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                    <div
+                        style="align-self: stretch; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                        Score:</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                        86,5</div>
+                </div>
+                <div
+                    style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                    <div
+                        style="align-self: stretch; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                        Zpracování:</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                        Natural</div>
+                </div>
+                <div
+                    style="overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                    <div
+                        style="align-self: stretch; color: rgba(0, 0, 0, 0.40); font-size: 8px; font-family: Roboto Slab; font-weight: 300; line-height: 9px; word-wrap: break-word">
+                        Váha:</div>
+                    <div
+                        style="align-self: stretch; color: black; font-size: 10px; font-family: Roboto Slab; font-weight: 400; word-wrap: break-word">
+                        200g</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="./src/main.js"></script>
 </body>

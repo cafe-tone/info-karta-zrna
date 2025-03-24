@@ -12,6 +12,7 @@
         "vite": "^6.2.3"
     },
     "dependencies": {
+        "htmlsvg": "^1.2.3",
         "jspdf": "^3.0.1"
     }
 }
