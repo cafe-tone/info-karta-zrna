@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Tag Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        button {
+            margin-top: 1.5rem;
+            padding: 0.75rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coffee Tag Generator</h1>
+    <form id="coffeeForm">
+        <label>Name <input name="name" required></label>
+        <label>Country <input name="country"></label>
+        <label>Taste Profile <textarea name="taste"></textarea></label>
+        <label>Farmer <input name="farmer"></label>
+        <label>Location <input name="location"></label>
+        <label>Sea Level Height (masl) <input name="height"></label>
+        <label>Variety <input name="variety"></label>
+        <label>Processing <input name="processing"></label>
+        <label>Score <input name="score"></label>
+        <button type="submit">Generate PDF</button>
+    </form>
+
+    <script>
+        document.getElementById('coffeeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = Object.fromEntries(new FormData(form));
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                orientation: 'portrait',
+                unit: 'cm',
+                format: [6, 9] // 6cm x 9cm
+            });
+
+            let y = 1;
+            doc.setFontSize(10);
+            for (const [key, value] of Object.entries(data)) {
+                doc.text(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`, 0.5, y);
+                y += 0.8;
+            }
+
+            doc.save(`${data.name || 'coffee_tag'}.pdf`);
+        });
+    </script>
+</body>
+
+</html>
