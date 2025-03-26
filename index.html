@@ -1,51 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Info o zrnech</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        label {
-            display: block;
-            margin-top: 1rem;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.5rem;
-        }
-
-        button {
-            margin-top: 1.5rem;
-            padding: 0.75rem;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Info o zrnech</h1>
-    <form id="coffeeForm">
-        <label>Název <input name="name" required></label>
-        <label>Země <input name="country"></label>
-        <label>Chuťový profil <textarea name="taste"></textarea></label>
-        <label>Farmář <input name="farmer"></label>
-        <label>Lokace <input name="location"></label>
-        <label>Výška nad mořem (od) <input name="height_from"></label>
-        <label>Výška nad mořem (do) <input name="height_to"></label>
-        <label>Odrůda <input name="variety"></label>
-        <label>Zpracování <input name="processing"></label>
-        <label>Skóre <input name="score" type="number" min="0" max="100"></label>
-        <button type="submit">Generovat PDF</button>
-    </form>
-
-    <script type="module" src="./src/main.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
