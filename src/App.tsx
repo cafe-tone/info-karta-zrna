@@ -2,6 +2,7 @@ import { Box, Container, Stack } from "@mui/material";
 import "./App.css";
 import { CoffeeInfoForm } from "./components/CofffeeInfoForm";
 import { Preview } from "./components/Preview";
+import PreviewCSS from "./components/PreviewCSS";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             }}
           >
             <Preview />
+            <PreviewCSS />
           </Box>
         </Stack>
       </Stack>
